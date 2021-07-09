@@ -1,0 +1,16 @@
+.btn_container{
+    width: 99%;
+    bottom: 45px;
+    position: absolute;
+    
+}
+.grid_btns{
+    place-content: center;
+    display: flex;
+}
+.video_btn{
+    align-self: center;
+    // border: 1px solid red;
+    cursor: pointer;
+    margin-left: 35px;
+}

@@ -1,0 +1,40 @@
+#inst_title{
+    background: white;
+    box-shadow: grayscale($color: #d4d4d45e) -1px 6px 13px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+#logo{
+    text-align: center;
+    width: 18%;
+    padding: 25px;
+}
+
+@include media('<=phone'){
+    #logo{
+        text-align: center;
+        width: 55%;
+        padding: 25px;
+    }
+    #success_icon{
+        margin-left: 12px;
+    }
+    
+    
+}
+@include media('>phone', '<tablet'){
+    #logo{
+        text-align: center;
+        width: 35%;
+        padding: 25px;
+    }
+}
+
+@media print{
+    #logo{
+        width: 15%;   
+        padding: 10px;
+    } 
+    
+}

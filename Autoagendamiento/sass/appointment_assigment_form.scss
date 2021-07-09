@@ -1,0 +1,693 @@
+@import "components/breakpoints";
+@import "components/include-media";
+@import "variables/variables";
+@import "components/header";
+body {
+    margin: 0;
+    font-family: var(--font);
+}
+
+h3 {
+    text-align: center;
+}
+
+#ticket {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+#ticket_grid {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 0.5px dashed #d3d3d3;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#calendar_area {
+    justify-self: center;
+    align-self: center;
+}
+#calendar {
+    width: 130px;
+    height: 140px;
+    background-color: white;
+    border-radius: 0px 0px 20px 20px;
+    text-align: center;
+}
+#day_bar {
+    text-align: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: #0075d4;
+    color: white;
+    font-weight: 700;
+}
+#day_number {
+    font-size: 44px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+#month {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+#hour {
+    margin-top: 3px;
+    font-size: 14px;
+}
+#data_column_container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+#data_column_1 {
+    font-size: 0.8em;
+}
+.data {
+    padding: 5px;
+}
+#data_column_container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#data_column_2 {
+    font-size: 0.8em;
+}
+.data {
+    padding: 5px;
+}
+#service {
+    width: 195px;
+    max-height: 45px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: break-spaces;
+}
+#subservice {
+    width: 195px;
+    max-height: 45px;
+    overflow: hidden;
+    white-space: break-spaces;
+}
+#qr_code {
+    width: 70%;
+    margin-top: 5px;
+}
+#qr_text {
+    margin-top: 15px;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+#qr_text2 {
+    margin-top: 10px;
+    font-size: 0.7em;
+    font-weight: 500;
+    width: 150px;
+}
+#user {
+    font-size: 13px;
+    padding-top: 15px;
+    padding-left: 20px;
+}
+#documents {
+    font-size: 13px;
+    padding-top: 15px;
+    padding-left: 30px;
+}
+#form_title {
+    width: 100%;
+    margin-top: 50px;
+}
+#form_subtitle {
+    width: 100%;
+    text-align: center;
+}
+
+#appointment_price_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#appointment_price {
+    font-size: 20px;
+    width: 63%;
+    height: 65px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    border: 0.5px solid #eeeeee;
+    box-shadow: grayscale($color: #d6d6d65e) -1px 6px 13px 0px;
+}
+#appointment_price:hover{
+    box-shadow: grayscale($color: #8181815e) -1px 6px 13px 0px;
+}
+#price_title{
+    width: 50%;
+    text-align: right;
+    margin-right: 10px;
+}
+#price{
+    font-size: 24px;
+    width: 50%;
+    margin-left: 25px;
+}
+#form_area {
+    display: flex;
+    justify-content: center;
+}
+#grid_form {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    width: 60%;
+    justify-items: center;
+}
+
+
+#grid_form .textbox:nth-child(9) {
+    grid-column: span 2;
+}
+#form_column1{
+    justify-self: center;
+    width: 80%;
+}
+#form_column2{
+    justify-self: center;
+    width: 80%;
+}
+.item{
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-bottom: 30px;
+}
+.coco_input{
+    border: none;
+	border-bottom: 2px solid black;
+	height: 2rem;
+	font-size: 1.0625rem;
+	padding-left: 0.875rem;
+	line-height: 147.6%;
+	padding-top: 0.825rem;
+    font-size: 14px;
+    font-family: var(--font);
+}
+.coco_input:focus{
+    outline: none;
+    border-bottom: 2px solid #008BCD;
+}
+
+#error_alert{
+    font-size: 12px;
+    font-weight: 400;
+    color: red;
+    font-style: italic;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+#radio_btn_title{
+    font-weight: 600;
+}
+#radio_btn_option{
+    display: flex;
+    width: 80%;
+    align-items: flex-start;
+    flex-direction: column;
+}
+#radio_btns{
+    display: flex;
+    align-items: center;
+    margin-top: 25px; 
+}
+.radio_btn_answer{
+    font-weight: 600;
+    margin-left: 15px;
+}
+.radio_btn{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 25px;
+}
+#textbox_title{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+#textbox_text{
+    font-family: var(--font);
+    color: #838383;
+    font-size: 14px;
+}
+.textbox{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    width:100%;
+}
+#textbox_text:focus{
+    outline: none;
+    border-bottom: 3px solid #008BCD;
+}
+.textbox:focus{
+    outline: none;
+    border-bottom: 2px solid #008BCD;
+}
+form{
+    width: 90%;
+}
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+.btn_area{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#btn_next{
+    font-family: var(--font);
+    font-weight: 600;
+    font-size: 16px;
+    height: 45px;
+    width: 220px;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    background-color: #0075D4;
+    cursor: pointer;
+}
+
+#btn_cancel{
+    font-family: var(--font);
+    font-weight: 600;
+    font-size: 16px;
+    height: 45px;
+    width: 150px;
+    border-radius: 50px;
+    border: none;
+    color: #888888;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 145px;
+}
+#btn_next:hover{
+    box-shadow: grayscale($color: #8181815e) -1px 6px 13px 0px;
+}
+
+
+#coco_logo {
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+#coco {
+    width: 5%;
+}
+
+@include media("<=phone") {
+    #ticket {
+        text-align: -webkit-center;
+    }
+    #ticket_grid {
+        display: block;
+        width: 90%;
+    }
+    #data_column_container1 {
+        align-items: center;
+        margin-top: 20px;
+    }
+    #data_column_container2 {
+        align-items: center;
+    }
+    #calendar_area {
+        margin-top: 20px;
+    }
+    .data {
+        margin-bottom: 20px;
+    }
+    #calendar_area {
+        margin-top: 20px;
+    }
+    .data {
+        margin-bottom: 20px;
+    }
+    #qr_code {
+        width: 90%;
+    }
+    #qr_text2 {
+        margin-bottom: 20px;
+    }
+    #user {
+        padding-left: 0px;
+        margin-bottom: 20px;
+    }
+    #documents {
+        padding-left: 0px;
+        margin-bottom: 20px;
+    }
+    #appointment_price{
+        width: 90%;
+    }
+    #price_title {
+        font-size: 14px;
+        text-align: left;
+        margin-left: 20px;
+        font-weight: 600;
+    }
+    #price {
+        margin-left: 15px;
+    }
+   
+    #grid_form {
+        display: block;
+        width: 100%;
+    }
+    .item{
+        width: 100%;
+    }
+    #form_area{
+        display: grid;
+        grid-template-columns: 95%;
+        grid-auto-flow: column;
+        justify-items: center;
+        width: 100%;
+    }
+    #radio_btn_option{
+        margin-top: 50px;   
+    }
+    form {
+        width: 100%;
+    }
+    .textbox {
+        margin-top: 35px;
+        display: flex;
+    }
+    .btn_area{
+        display: grid;
+        justify-items: center;
+        margin-top: 30px;   
+        margin-bottom: 40px;
+    }
+    #btn_next{
+        grid-row: 1/2;
+    }
+    .coco_input{
+        width: auto;
+    }
+    
+    #btn_cancel{
+       margin-right: 0px;
+    }
+    #coco_logo {
+        position: static;
+        width: 100%;
+        bottom: 0;
+        text-align: center;
+    }
+    #coco {
+        width: 25%;
+    }
+}
+@include media(">phone", "<tablet") {
+    #ticket {
+        text-align: -webkit-center;
+    }
+    #ticket_grid {
+        display: block;
+        width: 90%;
+    }
+    #data_column_container1 {
+        align-items: center;
+        margin-top: 20px;
+    }
+    #data_column_container2 {
+        align-items: center;
+    }
+    #calendar_area {
+        margin-top: 20px;
+    }
+    .data {
+        margin-bottom: 20px;
+    }
+    #calendar_area {
+        margin-top: 20px;
+    }
+    .data {
+        margin-bottom: 20px;
+    }
+    #qr_code {
+        width: 50%;
+    }
+    #qr_text2 {
+        margin-bottom: 20px;
+    }
+
+    #user {
+        padding-left: 0px;
+        margin-bottom: 20px;
+    }
+    #documents {
+        padding-left: 0px;
+        margin-bottom: 20px;
+    }
+    #appointment_price{
+        width: 90%;
+    }
+    #price_title {
+        font-size: 14px;
+        text-align: left;
+        margin-left: 20px;
+        font-weight: 600;
+    }
+    #price {
+        margin-left: 15px;
+    }
+   
+    #grid_form {
+        display: block;
+        width: 100%;
+    }
+    .item{
+        width: 100%;
+    }
+    #form_area{
+        display: grid;
+        grid-template-columns: 95%;
+        grid-auto-flow: column;
+        justify-items: center;
+        width: 100%;
+    }
+    #radio_btn_option{
+        margin-top: 50px;   
+    }
+    form {
+        width: 100%;
+    }
+    .textbox {
+        margin-top: 35px;
+        display: flex;
+    }
+    .btn_area{
+        display: grid;
+        justify-items: center;
+        margin-top: 30px;   
+        margin-bottom: 40px;
+    }
+    #btn_next{
+        grid-row: 1/2;
+    }
+    .coco_input{
+        width: auto;
+    }
+    
+    #btn_cancel{
+       margin-right: 0px;
+    }
+    #coco_logo {
+        position: static;
+        width: 100%;
+        bottom: 0;
+        text-align: center;
+    }
+    #coco {
+        width: 10%;
+    }
+}
+@include media(">tablet", "<desktop") {
+    #recomendations {
+        width: 85%;
+    }
+}
+// estilos para impresión
+
+@media print {
+    #confirm_title {
+        display: none;
+    }
+    #ticket {
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+    }
+    #ticket_grid {
+        font-size: 10px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 150px 50px;
+        border: 0.5px dashed #d3d3d3;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        text-align: left;
+    }
+    #ticket_grid #qr_area:nth-child(4) {
+        grid-row: span 2;
+        text-align: -webkit-center;
+        border-left: 0.5px dashed #d3d3d3;
+    }
+    #ticket_grid #documents:nth-child(6) {
+        border-top: 0.5px dashed #d3d3d3;
+        grid-column: span 2;
+    }
+    #calendar_area {
+        justify-self: center;
+        align-self: center;
+    }
+    #calendar {
+        width: 130px;
+        height: 140px;
+        background-color: white;
+        border-radius: 0px 0px 20px 20px;
+        text-align: center;
+    }
+    #day_bar {
+        text-align: center;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        background-color: #0075d4;
+        color: white;
+        font-weight: 700;
+    }
+    #day_number {
+        font-size: 44px;
+        font-weight: 700;
+        margin-top: 5px;
+    }
+    #month {
+        font-size: 14px;
+        font-weight: 600;
+        margin-top: 5px;
+    }
+    #hour {
+        margin-top: 3px;
+        font-size: 14px;
+    }
+    #data_column_container1 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    #data_column_1 {
+        font-size: 0.8em;
+    }
+    .data {
+        padding: 0px;
+    }
+    #data_column_container2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    #data_column_2 {
+        font-size: 0.8em;
+    }
+    .data {
+        padding: 5px;
+    }
+    #service {
+        width: 195px;
+        max-height: 22px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: break-spaces;
+    }
+    #subservice {
+        width: 195px;
+        max-height: 22px;
+        overflow: hidden;
+        white-space: break-spaces;
+    }
+    #qr_code {
+        width: 70%;
+        margin-top: 5px;
+    }
+    #qr_text {
+        margin-top: 15px;
+        font-size: 0.8em;
+        font-weight: 600;
+    }
+    #qr_text2 {
+        margin-top: 10px;
+        font-size: 0.7em;
+        font-weight: 500;
+        width: 150px;
+    }
+    #user {
+        border-top: 0.5px dashed #d3d3d3;
+        font-size: 8px;
+        padding-top: 15px;
+        padding-left: 20px;
+    }
+    #documents {
+        font-size: 8px;
+        padding-top: 15px;
+        padding-left: 30px;
+    }
+    #recomendations {
+        width: 90%;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    #recomendation_title {
+        font-size: 10px;
+        text-align: left;
+        float: left;
+    }
+
+    #recomendation_text {
+        font-size: 8px;
+        margin-top: 3px;
+        line-height: 15px;
+    }
+    #actions_title {
+        display: none;
+    }
+    #final_actions {
+        display: none;
+    }
+    #coco_logo {
+        display: none;
+    }
+}

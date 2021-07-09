@@ -1,0 +1,258 @@
+@import 'components/breakpoints';
+@import 'components/include-media';
+@import 'variables/variables';
+@import 'components/header';
+body{
+    margin: 0;
+    font-family: var(--font);
+}
+
+
+#ticket{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+#ticket_grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    border: 0.5px dashed #D3D3D3;
+    background-color: #F9F9F9;
+    border-radius: 10px;
+    padding: 10px;
+    width: 60%;
+}
+
+#calendar_area{
+    justify-self: center;
+    align-self: center;
+}
+#calendar{
+    width: 130px;
+    height: 140px;
+    background-color: white;
+    border-radius: 0px 0px 20px 20px;
+    text-align: center;
+}
+#day_bar{
+    text-align: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: #0075D4;
+    color: white;
+    font-weight: 700;
+}
+#day_number{
+    font-size: 44px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+#month{
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+#hour{
+    margin-top:3px;
+    font-size: 14px;
+}
+#data_column_container1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+#data_column_1{
+    font-size: 0.8em;
+}
+.data{
+    padding: 5px;
+}
+#data_column_container2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#data_column_2{
+    width: 90%;
+    font-size: 0.8em;
+}
+.data{
+    padding: 5px;
+}
+#service{
+    max-height: 45px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: break-spaces;
+}
+#subservice{
+    max-height: 45px;
+    overflow: hidden;
+}
+#qr_code{
+    width: 70%;
+    margin-top: 5px;
+}
+#qr_text{
+    margin-top: 15px;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+#qr_text2{
+    margin-top: 10px;
+    font-size: 0.7em;
+    font-weight: 500;
+    width: 150px;
+}
+
+#recomendations{
+    width: 60%;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+
+#recomendation_text{
+    margin-top: 15px;
+    line-height: 25px;
+    
+}
+
+#coco_logo{
+    position: initial;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+#btn_cancel_container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 100px;
+    align-items: center;
+    margin-top: 20px;
+}
+#btn_cancel{
+    height: 45px;
+    width: 20%;
+    background-color: #0075D4;
+    color: white;
+    font-family: var(--fontfamily);
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+}
+#btn_cancel:hover{
+    box-shadow: grayscale($color: #9e9e9e5e) -1px 6px 13px 0px;
+}
+#coco{
+    width: 5%;
+}
+
+@include media('<=phone'){
+    #ticket{
+        text-align: -webkit-center; 
+    }
+    #ticket_grid{
+        display: block;
+        width: 90%;
+    }
+    #data_column_container1{
+        align-items: center;
+        margin-top: 20px;
+    }
+    #data_column_container2{
+        align-items: center;
+    }
+    #calendar_area{
+        margin-top: 20px;
+    }
+    .data{
+        margin-bottom: 20px;
+    }
+    #calendar_area{
+        margin-top: 20px;
+    }
+    .data{
+        margin-bottom: 20px;
+    }
+    
+    #user{
+        padding-left: 0px;
+        margin-bottom: 20px;
+    }
+    #documents{
+        padding-left: 0px;
+        margin-bottom: 20px;
+    }
+    #recomendations {
+        width: 80%;
+    }
+    #recomendation_title{
+        align-self: center;
+    }
+    #btn_cancel{
+        width: 80%;
+    }
+    #coco {
+        width: 25%;
+    }
+}
+@include media('>phone', '<tablet'){
+    #ticket{
+        text-align: -webkit-center; 
+    }
+    #ticket_grid{
+        display: block;
+        width: 90%;
+    }
+    #data_column_container1{
+        align-items: center;
+        margin-top: 20px;
+    }
+    #data_column_container2{
+        align-items: center;
+    }
+    #calendar_area{
+        margin-top: 20px;
+    }
+    .data{
+        margin-bottom: 20px;
+    }
+    #calendar_area{
+        margin-top: 20px;
+    }
+    .data{
+        margin-bottom: 20px;
+    }
+    
+    #user{
+        padding-left: 0px;
+        margin-bottom: 20px;
+    }
+    #documents{
+        padding-left: 0px;
+        margin-bottom: 20px;
+    }
+    #recomendations {
+        width: 85%;
+    }
+    #recomendation_title{
+        align-self: center;
+    }
+    #btn_cancel{
+        width: 70%;
+    }
+    #coco {
+        width: 15%;
+    }
+}
+@include media('>tablet', '<desktop'){
+    #recomendations{
+        width: 85%;
+    }
+}

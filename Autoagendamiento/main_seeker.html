@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css\main_seeker.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="sass\JS\dropdown function.js"></script>
+  <title>Buscador</title>
+</head>
+
+<body>
+  <span id="background"></span>
+  <div id="pop_up_container">
+    <div id="pop_up">
+        <h2 id="pop_up_title">Atención</h2>
+        <div id="pop_up_text">Este servicio está disponible de forma particular, tu asegurador
+          no cubrirá los gastos y tendrás que pagar por el.</div>
+        <button id="btn_pop_up_next">Aceptar</button>
+    </div>
+  </div>
+  <header id="inst_title">
+    <img id="logo" src="imagenes\logo copsana.png" alt="">
+  </header>
+  <div id="top_text">
+    <h1 id="top_title">Agenda tu cita fácil y rápido</h1>
+    <div id="main_subtitle">Busca tu servicio</div>
+  </div>
+
+  <div id="search_bar_container">
+    <div id="search_bar">
+      <div id="grid_container">
+        <div class="item" id="document">
+          <div class="doc_type_title">
+            EPS/ARL
+          </div>
+          <div class="dropdown">
+            <button onclick="myFunction()" id="type_selector" class="coco_input">Selecciona tu asegurador: <img
+                src="imagenes\expand_more_black_24dp.svg" alt=""></button>
+            <div id="myDropdown" class="dropdown-content">
+              <!-- <input  type="text" placeholder="Search.." id="myInput" class="coco_input" onkeyup="filterFunction()"> -->
+              <a href="#cc">Sura</a>
+              <a href="#ce">Comfama</a>
+              <a href="#pass">Comeva</a>
+              <a href="#pe">Surmaericana</a>
+            </div>
+          </div>
+        </div>
+
+        <label class="item">
+          <div class="doc_type_title">Selecciona tu servicio:</div>
+          <input type="text" placeholder="Servicio" class="coco_input" />
+          <div style="display: none;" id="error_alert"> Error al escribir en este campo</div>
+        </label>
+
+        <label class="item">
+          <div class="doc_type_title">Selecciona tu Subservicio:</div>
+          <input type="text" placeholder="Subservicio" class="coco_input" />
+          <div style="display: none;" id="error_alert"> Error al escribir en este campo</div>
+        </label>
+
+        <label class="item">
+          <div class="doc_type_title">Selecciona una sede</div>
+          <input type="text" placeholder="Sede" class="coco_input" />
+          <div style="display: none;" id="error_alert"> Error al escribir en este campo</div>
+        </label>
+
+
+        <div class="item" id="document">
+          <div class="doc_type_title">
+            Selecciona un profesional
+
+          </div>
+          <div class="dropdown">
+            <button onclick="myFunction()" id="type_selector" class="coco_input">Selecciona tu asegurador: <img
+                src="imagenes\expand_more_black_24dp.svg" alt=""></button>
+            <div id="myDropdown" class="dropdown-content">
+              <input type="text" placeholder="Search.." id="myInput" class="coco_input" onkeyup="filterFunction()">
+              <a href="#cc">Cualquiera</a>
+              <a href="#ce">Comfama</a>
+              <a href="#pass">Comeva</a>
+              <a href="#pe">Surmaericana</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="btn_search_container" class="item">
+          <button id="btn_search"> <img id="search_icon" src="imagenes\search_icon.svg" alt=""> </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="quick_appointment_title">
+    <h4>Lo más buscado</h4>
+  </div>
+  <div id="quick_appointment_container">
+    <div id="quick_appointment_grid">
+      <div class="quick_appointment_cell">
+        <span class="hover">Buscar</span>
+        <div id="appointment_grid_list">
+          <div class="list_grid">EPS/ARL:</div>
+          <div class="list_grid">Servicio:</div>
+          <div class="list_grid">Sub servicio:</div>
+          <div class="list_grid">Sede:</div>
+          <div class="list_grid answer">Sura</div>
+          <div class="list_grid answer">Medicina general Medicina general Medicina general</div>
+          <div class="list_grid answer">Revisión</div>
+          <div class="list_grid answer">Oriental</div>
+        </div>
+      </div>
+
+      <div class="quick_appointment_cell">
+        <span class="hover">Buscar</span>
+        <div id="appointment_grid_list">
+          <div class="list_grid">EPS/ARL:</div>
+          <div class="list_grid">Servicio:</div>
+          <div class="list_grid">Sub servicio:</div>
+          <div class="list_grid">Sede:</div>
+          <div class="list_grid answer">Sura</div>
+          <div class="list_grid answer">Medicina generalMedicina general Medicina general</div>
+          <div class="list_grid answer">Revisión</div>
+          <div class="list_grid answer">Oriental</div>
+        </div>
+      </div>
+
+      <div class="quick_appointment_cell">
+        <span class="hover">Buscar</span>
+        <div id="appointment_grid_list">
+          <div class="list_grid">EPS/ARL:</div>
+          <div class="list_grid">Servicio:</div>
+          <div class="list_grid">Sub servicio:</div>
+          <div class="list_grid">Sede:</div>
+          <div class="list_grid answer">Sura</div>
+          <div class="list_grid answer">Medicina general Medicina general Medicina</div>
+          <div class="list_grid answer">Revisión</div>
+          <div class="list_grid answer">Oriental</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="bottom_coco_container">
+    <div id="bottom_coco">
+      <img id="coco" src="imagenes\coco_logo.svg" alt="">
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,317 @@
+@import 'components/breakpoints';
+@import 'components/include-media';
+@import 'variables/variables';
+@import 'components/header';
+body{
+    margin: 0;
+    font-family: var(--font);
+}
+#main_title_container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10vh;
+}
+#main_paragraph_container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#search_bar_container{
+    display: flex;
+    width: auto;
+    justify-content: center;
+}
+#search_bar{
+    display: grid;
+    align-content: center;
+    margin-top: 25px;
+    height: 115px;
+    width: 90%;
+    border-radius: 60px;
+    box-shadow: -1px 2px 8px 3px rgb(0 0 0 / 5%);
+}
+#grid_container{
+    width: 85%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    justify-items: self-start;
+    justify-items: center;
+}
+#btn_search_container{
+    align-self: center;
+    justify-content: center;
+}
+#btn_search{
+    width: 220px;
+    height: 45px;
+    font-family: var(--font);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--color7);
+    cursor: pointer;
+}
+#btn_search:hover{
+    box-shadow: -1px 2px 8px 3px rgb(0 0 0 / 18%);
+}
+
+
+.forms{
+    display: grid;
+    width: 100%;
+}
+.label{
+    justify-self: left;
+    margin-bottom: 15px;
+    font-size: var(--h5);
+    color: var(--color4);
+    font-weight: 400;
+}
+.item{
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 75px;
+}
+
+.coco_input:focus{
+    outline: none;
+    border-bottom: 2px solid #008BCD;
+}
+#document{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#doc_type_title{
+    font-weight: 600;
+}
+#type_selector{
+    height: 55px;
+    width: 89%;
+    padding-left: 2px;
+    display: flex;
+    place-content: space-between;
+    place-items: center;
+}
+.coco_input {
+    background-color: transparent;
+    border: none;
+	border-bottom: 2px solid black;
+	height: 70px;
+	padding-top: 0.825rem;
+    font-size: 12px;
+    font-family: var(--font);
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+  }
+  a{
+      font-weight: 400;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .coco_input:focus {
+    outline: none;
+    border-bottom: 2px solid #008BCD
+  }
+  
+  /* The search field */
+  #myInput {
+    box-sizing: border-box;
+    background-image: url('searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* The search field when it gets focus/clicked on */
+  #myInput:focus {outline: 3px solid #ddd;}
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    align-items: flex-start;
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    border: 1px solid #ddd;
+    z-index: 1;
+    width: 88%;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #e7e7e7}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+
+#bottom_coco_container{
+    width: 100%;
+}
+#bottom_coco{
+    text-align: center;
+    width: 99%;
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+}
+.result_ask{
+    font-size: var(--h5);
+    font-weight: 400;
+}
+.result_answer{
+    font-size: var(--h5);
+    font-weight: 600;
+}
+#coco {
+    width: 5%;
+}
+
+
+
+@include media('<=phone'){
+    #main_title_container{
+        text-align: center;
+        font-size: 12px;
+        width: 91%;
+        margin: 30px auto;
+    }
+    #main_paragraph_container{
+        text-align: center;
+        width: 80%;
+    margin: 0 auto;
+    }
+    #grid_container{
+        text-align: center;
+        display: block;
+    }
+    #search_bar{
+        height: auto;
+        margin-top: 15px;
+    }
+    .item{
+        margin: 50px auto;
+        width: 100%;
+    }
+    #doc_type_title{
+        text-align: left;
+        width: 99%;
+        font-size: 14px;
+    }
+    .dropdown{
+        text-align: start;
+    }
+    #search_bar{
+        align-content: baseline;
+        border-radius: 15px;
+    }
+    #bottom_coco{
+        position: inherit;
+        margin-top: 50px;
+    }
+    #document{
+        height: 55px;
+        margin-left: 0px;
+        width: 99%;
+    }
+    #btn_search_container{
+        margin-bottom: 20px;
+    }
+    #type_selector{
+        width: 100%;
+    }
+    .coco_input {
+        width: 98%;
+    }
+    #coco {
+        width: 25%;
+    }
+
+}
+@include media('>phone', '<tablet'){
+    #main_title_container{
+        text-align: center;
+        font-size: 12px;
+        width: 91%;
+        margin: 30px auto;
+    }
+    #main_paragraph_container{
+        text-align: center;
+        width: 80%;
+    margin: 0 auto;
+    }
+    #grid_container{
+        text-align: center;
+        display: block;
+    }
+    #search_bar{
+        height: auto;
+        margin-top: 15px;
+    }
+    .item{
+        margin: 50px auto;
+        width: 100%;
+    }
+    #doc_type_title{
+        text-align: left;
+        width: 99%;
+        font-size: 14px;
+    }
+    .dropdown{
+        text-align: start;
+    }
+    #search_bar{
+        align-content: baseline;
+        border-radius: 15px;
+    }
+    #bottom_coco{
+        position: inherit;
+        margin-top: 50px;
+    }
+    #document{
+        height: 55px;
+        margin-left: 0px;
+        width: 99%;
+    }
+    #btn_search_container{
+        margin-bottom: 20px;
+    }
+    #type_selector{
+        width: 100%;
+    }
+    .coco_input {
+        width: 98%;
+    }
+    #coco {
+        width: 15%;
+    }
+}
+@include media('>tablet', '<desktop'){
+    
+}

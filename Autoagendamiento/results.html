@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link  rel="stylesheet" href="css\results.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <script src="sass\JS\dropdown function.js"></script>
+    <title>Resultados</title>
+</head>
+
+<body>
+    <header id="inst_title">
+        <img id="logo" src="imagenes\logo copsana.png" alt="">
+      </header> 
+<div id="top_text">
+  <h1 id="top_title" >Selecciona el tipo y la hora que necesitas ser atendido</h1>
+  <div id="main_subtitle">Ahora verás la agenda de cada médico disponible y el tipo de cita, selecciona la hora que mejor te parezca:</div>
+</div>
+
+<div id="search_bar_container">
+  <div id="search_bar">
+      <div id="grid_container">
+          <div class="item" id="document">
+              <div class="doc_type_title">
+                  EPS/ARL
+              </div>
+              <div class="dropdown">
+                  <button onclick="myFunction()" id="type_selector" class="coco_input">Selecciona tu asegurador: <img src="imagenes\expand_more_black_24dp.svg" alt=""></button> 
+                  <div id="myDropdown" class="dropdown-content">
+                    <!-- <input  type="text" placeholder="Search.." id="myInput" class="coco_input" onkeyup="filterFunction()"> -->
+                    <a href="#cc">Sura</a>
+                    <a href="#ce">Comfama</a>
+                    <a href="#pass">Comeva</a>
+                    <a href="#pe">Surmaericana</a>
+                  </div>
+              </div>
+          </div>
+            
+          <label class="item">
+              <div class="doc_type_title">Selecciona tu servicio:</div>
+              <input type="text" placeholder="Servicio"  class="coco_input"  />
+              <div style="display: none;" id="error_alert"> Error al escribir en este campo</div>
+          </label>
+
+          <label class="item">
+              <div class="doc_type_title">Selecciona tu Subservicio:</div>
+              <input type="text" placeholder="Subservicio"  class="coco_input"  />
+              <div style="display: none;" id="error_alert"> Error al escribir en este campo</div>
+          </label>
+
+          <label class="item">
+            <div class="doc_type_title">Selecciona una sede</div>
+            <input type="text" placeholder="Sede"  class="coco_input"  />
+            <div style="display: none;" id="error_alert"> Error al escribir en este campo</div>
+          </label>
+
+
+          <div class="item" id="document">
+            <div class="doc_type_title">
+              Selecciona un profesional
+
+            </div>
+            <div class="dropdown">
+                <button onclick="myFunction()" id="type_selector" class="coco_input">Selecciona tu asegurador: <img src="imagenes\expand_more_black_24dp.svg" alt=""></button> 
+                <div id="myDropdown" class="dropdown-content">
+                  <input  type="text" placeholder="Search.." id="myInput" class="coco_input" onkeyup="filterFunction()">
+                  <a href="#cc">Cualquiera</a>
+                  <a href="#ce">Comfama</a>
+                  <a href="#pass">Comeva</a>
+                  <a href="#pe">Surmaericana</a>
+                </div>
+            </div>
+          </div>
+
+          <div id="btn_search_container" class="item">
+              <button id="btn_search" > <img id="search_icon" src="imagenes\search_icon.svg" alt=""> </button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div id="recomendation_note_container">
+  <div id="recomendation_note">
+    <img id="recomendation_note_icon" src="imagenes\recomentadion_note_icon.svg" alt="">
+    <ul>
+      <li>- Si eres mayor de 45 años no requieres estar priorizado en <a href="https://mivacuna.sispro.gov.co/MiVacuna/">https://mivacuna.sispro.gov.co/MiVacuna/</a></li>
+      <li>- Si tienes entre 40 y 44 años debes estar priorizado en <a href="https://mivacuna.sispro.gov.co/MiVacuna/">https://mivacuna.sispro.gov.co/MiVacuna/</a>, de lo contrario no serás vacunado.
+      </li>
+      <li>- Si tienes entre 16 y 44 años debes estar priorizado en <a href="https://mivacuna.sispro.gov.co/MiVacuna/">https://mivacuna.sispro.gov.co/MiVacuna/</a> , de lo contrario no serás vacunado.</li>
+    </ul>
+  </div>
+</div>
+<div id="appoinment_type_container">
+  <div id="appoinment_type_title">
+    Selecciona el tipo de atención:
+  </div>
+  <div id="appoinment_type_selector">
+    <div class="appoinment_type">
+      <img class="appoinment_type_icon" src="imagenes\Presencial_icon.svg" alt="">
+      <input type="radio" class="radio_btn"  value="100">
+      <div class="appoinment_type_text">Presencial</div> 
+    </div>
+    <div class="appoinment_type">
+      <img class="appoinment_type_icon" src="imagenes\Phone_icon.svg" alt="">
+      <input type="radio" class="radio_btn"  value="100">
+      <div class="appoinment_type_text">Llamada</div>
+    </div>
+    <div class="appoinment_type">
+      <img class="appoinment_type_icon" src="imagenes\cam_icon.svg" alt="">
+      <input type="radio" class="radio_btn"  value="100">
+      <div class="appoinment_type_text">Teleatención</div>
+    </div>
+  </div>
+</div>
+<div id="btn_date_selector_container">
+  <button id="btn_date_selector" >Diciembre 14 del 2020</button>
+  <div id="btn_date_selector_text">clic para cambiar fecha</div>
+</div>
+
+<div style="display: none;" id="alerts_container">
+  <div class="alert">
+    <img id="warning_icon" src="imagenes\warning_icon.svg" alt="">
+    <div id="alert_text">INFORMATIONAL. Lorem ipsum dolor sit</div> 
+  </div>
+</div>
+
+<div id="appointment_title">Selecciona el la hora de reserva:</div>
+<div id="grid_appoitnment_area">
+  <div class="columns controls">
+    <img class="left" src="imagenes\left_icon.svg" alt="">
+  </div>
+  <div class="columns">
+    <div class="profesional_area">
+      <div class="profesional_title">Profesional:</div> 
+      <div class="profesional">Dr. Bianca Lucía Gómez</div>
+    </div>
+    <button class="appoinment_cell">
+      <span class="hover">Reservar</span>
+      <img class="morning_icon" src="imagenes\morning_icon.svg" alt="">
+      <div class="appointment_hour">8:00 pm</div>
+      <div class="location">
+        Sede: <br>
+       Hospital Manuela Beltrán
+      </div>    
+    </button>
+    <div class="appoinment_cell">
+      <span class="hover">Reservar</span>
+      <img class="morning_icon" src="imagenes\morning_icon.svg" alt="">
+      <div class="appointment_hour">8:30 am</div>
+      <div class="location">
+        Sede: <br>
+       Hospital Manuela Beltrán
+      </div>    
+    </div>
+    <div class="appoinment_cell">
+      <span class="hover">Reservar</span>
+      <img class="morning_icon" src="imagenes\morning_icon.svg" alt="">
+      <div class="appointment_hour">9:00 am</div>
+      <div class="location">
+        Sede: <br>
+       Hospital Manuela Beltrán
+      </div>    
+    </div>
+    <div class="appoinment_cell">
+      <span class="hover">Reservar</span>
+      <img class="morning_icon" src="imagenes\morning_icon.svg" alt="">
+      <div class="appointment_hour">9:30 am</div>
+      <div class="location">
+        Sede: <br>
+       Hospital Manuela Beltrán
+      </div>    
+    </div>
+    <div class="appoinment_cell">
+      <span class="hover">Reservar</span>
+      <img class="morning_icon" src="imagenes\morning_icon.svg" alt="">
+      <div class="appointment_hour">10:00 am</div>
+      <div class="location">
+        Sede: <br>
+       Hospital Manuela Beltrán
+      </div>    
+    </div>
+  </div>
+  <div class="columns">
+    <div class="profesional_area">
+      <div class="profesional_title">Profesional:</div> 
+      <div class="profesional">Dr. Juan José Arbelaez</div>
+    </div>
+    <div class="appoinment_cell">
+      <span class="hover">Reservar</span>
+      <img class="morning_icon" src="imagenes\morning_icon.svg" alt="">
+      <div class="appointment_hour">8:00 am</div>
+      <div class="location">
+        Sede: <br>
+       Hospital Manuela Beltrán
+      </div>    
+    </div>
+    <div class="appoinment_cell">
+      <span class="hover">Reservar</span>
+      <img class="morning_icon" src="imagenes\morning_icon.svg" alt="">
+      <div class="appointment_hour">8:30 am</div>
+      <div class="location">
+        Sede: <br>
+       Hospital Manuela Beltrán
+      </div>    
+    </div>
+    <div class="appoinment_cell">
+      <span class="hover">Reservar</span>
+      <img class="morning_icon" src="imagenes\morning_icon.svg" alt="">
+      <div class="appointment_hour">9:00 am</div>
+      <div class="location">
+        Sede: <br>
+       Hospital Manuela Beltrán
+      </div>    
+    </div>
+    <div class="appoinment_cell">
+      <span class="hover">Reservar</span>
+      <img class="morning_icon" src="imagenes\morning_icon.svg" alt="">
+      <div class="appointment_hour">8:30 am</div>
+      <div class="location">
+        Sede: <br>
+       Hospital Manuela Beltrán
+      </div>    
+    </div>
+    <div class="appoinment_cell">
+      <span class="hover">Reservar</span>
+      <img class="morning_icon" src="imagenes\morning_icon.svg" alt="">
+      <div class="appointment_hour">9:00 am</div>
+      <div class="location">
+        Sede: <br>
+       Hospital Manuela Beltrán
+      </div>    
+    </div>
+    
+  </div>
+  <div class="columns">
+    <div class="profesional_area">
+      <div class="profesional_title">Profesional:</div> 
+      <div class="profesional">Dr. Andrés Sánchez</div>
+    </div>
+    <div class="appoinment_cell">
+      <span class="hover">Reservar</span>
+      <img class="morning_icon" src="imagenes\morning_icon.svg" alt="">
+      <div class="appointment_hour">8:00 am</div>
+      <div class="location">
+        Sede: <br>
+       Hospital Manuela Beltrán
+      </div>    
+    </div>
+    <div class="appoinment_cell">
+      <span class="hover">Reservar</span>
+      <img class="morning_icon" src="imagenes\afternoon_icon.svg" alt="">
+      <div class="appointment_hour">1:00 pm</div>
+      <div class="location">
+        Sede: <br>
+       Hospital Manuela Beltrán
+      </div>    
+    </div>
+    <div class="appoinment_cell">
+      <span class="hover">Reservar</span>
+      <img class="morning_icon" src="imagenes\afternoon_icon.svg" alt="">
+      <div class="appointment_hour">1:30pm</div>
+      <div class="location">
+        Sede: <br>
+       Hospital Manuela Beltrán
+      </div>    
+    </div>
+  </div>
+  <div class="columns">
+    
+    <div class="profesional_area">
+      <div class="profesional_title">Profesional:</div> 
+      <div class="profesional">Dr. Lina Muñoz Molina</div>
+    </div>
+    <div class="appoinment_cell">
+      <span class="hover">Reservar</span>
+      <img class="morning_icon" src="imagenes\afternoon_icon.svg" alt="">
+      <div class="appointment_hour">3:00 pm</div>
+      <div class="location">
+        Sede: <br>
+       Comfama Rionegro
+      </div>    
+    </div>
+    <div class="appoinment_cell ">
+      <span class="hover">Reservar</span>
+      <img class="morning_icon" src="imagenes\afternoon_icon.svg" alt="">
+      <div class="appointment_hour">3:30 pm</div>
+      <div class="location">
+        Sede: <br>
+        Comfama Rionegro
+      </div>    
+    </div>
+    
+    <!-- <div class="appoinment_cell">
+      <span class="hover">Reservar</span>
+      <img class="morning_icon" src="imagenes\morning_icon.svg" alt="">
+      <div class="appointment_hour">8:00pm</div>
+      <div class="location">
+        Sede: <br>
+       Hospital Manuela Beltrán
+      </div>    
+    </div>
+
+    <div class="appoinment_cell">
+      <span class="hover">Reservar</span>
+      <img class="morning_icon" src="imagenes\morning_icon.svg" alt="">
+      <div class="appointment_hour">8:00pm</div>
+      <div class="location">
+        Sede: <br>
+       Hospital Manuela Beltrán
+      </div>    
+    </div> -->
+  </div>
+  <div class="columns">
+    <div class="profesional_area">
+      <div class="profesional_title">Profesional:</div> 
+      <div class="profesional">Dr. Julian Alberto Pardo</div>
+    </div>
+    <div class="appoinment_cell">
+      <span class="hover">Reservar</span>
+      <img class="morning_icon" src="imagenes\morning_icon.svg" alt="">
+      <div class="appointment_hour">9:30 am</div>
+      <div class="location">
+        Sede: <br>
+       Hospital Manuela Beltrán
+      </div>    
+    </div>
+    <div class="appoinment_cell">
+      <span class="hover">Reservar</span>
+      <img class="morning_icon" src="imagenes\morning_icon.svg" alt="">
+      <div class="appointment_hour">10:00 am</div>
+      <div class="location">
+        Sede: <br>
+       Hospital Manuela Beltrán
+      </div>    
+    </div>
+    <div class="appoinment_cell">
+      <span class="hover">Reservar</span>
+      <img class="morning_icon" src="imagenes\afternoon_icon.svg" alt="">
+      <div class="appointment_hour">1:00 pm</div>
+      <div class="location">
+        Sede: <br>
+       Hospital Manuela Beltrán
+      </div>    
+    </div>
+    <div class="appoinment_cell">
+      <span class="hover">Reservar</span>
+      <img class="morning_icon" src="imagenes\morning_icon.svg" alt="">
+      <div class="appointment_hour">8:00pm</div>
+      <div class="location">
+        Sede: <br>
+       Hospital Manuela Beltrán
+      </div>    
+    </div>
+  </div>
+  <div class="columns controls">
+    <img class="left" src="imagenes\right_icon.svg" alt="">
+    <div id="up_down_controls">
+      <img class="up" src="imagenes\up_icon.svg" alt="">
+      <img class="down" src="imagenes\down_icon.svg" alt="">
+    </div>
+  </div>
+</div>
+
+<div id="bottom_coco_container">
+  <div id="bottom_coco">
+      <img id="coco" src="imagenes\coco_logo.svg" alt="">
+  </div>
+</div>
+    
+</body>
+</html>

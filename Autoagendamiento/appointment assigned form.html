@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="css\appointment_assigment_form.css">
+	<title></title>
+</head>
+
+<body>
+	<header id="inst_title">
+		<img id="logo" src="imagenes\logo copsana.png" alt="">
+	</header>
+	<div id="alert_container">
+		<div class="alert">
+			<img src="" alt="">
+		</div>
+	</div>
+	<h3>Esta es tu cita</h3>
+	<div class="main_content">
+		<div id="ticket">
+			<div id="ticket_grid">
+				<div id="calendar_area">
+					<div id="calendar">
+						<div id="day_bar">Miércoles</div>
+						<div id="day_number"> 17</div>
+						<div id="month">Marzo 2020</div>
+						<div id="hour">Hora: <b>03:00pm</b></div>
+					</div>
+				</div>
+				<div id="data_column_container1">
+					<div id="data_column_1">
+						<div class="data">
+							<div>Tipo de cita:</div>
+							<div><b>Teleatencion</b></div>
+						</div>
+						<div class="data">
+							<div>Sede:</div>
+							<div><b>Hospital Manuela Beltrán</b></div>
+						</div>
+						<div class="data">
+							<div>Profesional:</div>
+							<div><b>Jose Julián Monrroy</b></div>
+						</div>
+						<div class="data">
+							<div>Usuario:</div>
+							<div> <b>Andrés Julián Restrepo Camargo</b> </div>
+						</div>
+						<div class="data">
+							<div>Documento:</div>
+							<div><b>8456169461-47</b></div>
+						</div>
+					</div>
+				</div>
+				<div id="data_column_container2">
+					<div id="data_column_2">
+						<div class="data">
+							<div>Servicio:</div>
+							<div id="service"><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus aliquam
+									veritatis fuga quaerat. Totam neque quisquam, vel, hic, magni ullam possimus libero
+									itaque quo molestiae eum eveniet laboriosam sapiente praesentium?</b></div>
+						</div>
+						<div class="data">
+							<div>Subservicio:</div>
+							<div id="subservice"><b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Repudiandae laborum nihil laudantium quibusdam quidem odit atque delectus iusto
+									cupiditate aliquid voluptatem, harum asperiores totam dolore, facilis praesentium!
+									Iste, aspernatur eius?</b></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div id="appointment_price_container">
+			<div id="appointment_price">
+				<div id="price_title">El valor de esta cita es:</div> 
+				<div id="price"><b>$50.000</b></div>
+			</div>
+		</div>
+		<div id="form_title">
+			<h3>Completa los datos para finalizar</h3>
+			<div id="form_subtitle">Usaremos estos datos para mantenerte informado sobre tu reserva</div>
+		</div>
+		<div id="form_area">
+			<div id="grid_form">
+					<label class="item">
+						Primer nombre
+						<input  type="text" placeholder="Ingresa tu primer nombre" class="coco_input">
+						<div style="display: none;" id="error_alert"> Error al escribir en este campo</div>
+					</label>
+					<label class="item">
+						Segundo nombre
+						<input type="text" placeholder="Ingresa tu segundo nombre" class="coco_input" type="email" />
+						<div style="display: none;" id="error_alert"> Error al escribir en este campo</div>
+					</label>
+					<label class="item">
+						Primer apellido
+						<input type="text" placeholder="Ingresa tu primer apellido"  class="coco_input"  />
+						<div style="display: none;" id="error_alert"> Error al escribir en este campo</div>
+					</label>
+					<label class="item">
+						Segundo apellido
+						<input type="text" placeholder="Ingresa tu segundo apellido" class="coco_input" type="email" />
+						<div style="display: none;" id="error_alert"> Error al escribir en este campo</div>
+					</label>
+					<label class="item">
+						Teléfono
+						<input type="text" placeholder="Ingresa tu teléfono fijo" class="coco_input"  />
+						<div style="display: none;" id="error_alert"> Error al escribir en este campo</div>
+					</label>
+					<label class="item">
+						Celular
+						<input placeholder="Ingresa tu celular" class="coco_input" type="text" />
+						<div style="display: none;" id="error_alert"> Error al escribir en este campo</div>
+					</label>
+					<label class="item">
+						Correo electrónico
+						<input type="text" placeholder="Ingresa tu correo electrónico"class="coco_input" />
+					</label>
+					<div id="radio_btn_option">
+						<b id="radio_btn_title">Paciente referido</b>
+						<div id="radio_btns"> 
+						<br>
+						<input type="radio" class="radio_btn"  value="100">
+						<label class="radio_btn_answer">SI</label><br>
+						<br>
+						<input type="radio" class="radio_btn" value="100">
+						<label class="radio_btn_answer">NO</label><br>
+					</div>
+					<div  id="error_alert"> Error al escribir en este campo</div>
+				</div>
+				
+				<div class="textbox">
+					<form>
+						<div id="textbox_title">Motivo de la consulta:</div>
+						<textarea id="textbox_text" > Escribe acá los motivos de la consulta</textarea>
+					</form>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<div class="btn_area">
+		<button  id="btn_cancel">Cancelar</button>
+		<button  id="btn_next">Siguiente</button>	
+	</div>
+	<div id="coco_logo">
+		<img id="coco" src="imagenes\coco_logo.svg" alt="">
+	</div>
+
+</body>
+
+</html>

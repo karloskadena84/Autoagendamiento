@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link  rel="stylesheet" href="css\validation.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <script src="sass\JS\dropdown function.js"></script>
+    <title>Validación</title>
+</head>
+
+<body>
+    <header id="inst_title">
+        <img id="logo" src="imagenes\logo copsana.png" alt="">
+      </header> 
+<div id="main_title_container">
+    <h1>Ingresa tu número de documento</h1>
+</div>
+<div id="main_paragraph_container">
+    <p>Para poder agendar tu cita debes de ingresar tu número de documento.</p>
+</div>
+<div id="search_bar_container">
+    <div id="search_bar">
+        <div id="grid_container">
+            <div class="item" id="document">
+                <div id="doc_type_title">
+                    Cédula de ciudadanía:
+                </div>
+                <div class="dropdown">
+                    <button onclick="myFunction()" id="type_selector" class="coco_input">Selecciona el tipo de documento <img src="imagenes\expand_more_black_24dp.svg" alt=""></button> 
+                    <div id="myDropdown" class="dropdown-content">
+                      <!-- <input  type="text" placeholder="Search.." id="myInput" class="coco_input" onkeyup="filterFunction()"> -->
+                      <a href="#cc">Cédula de ciudadanía</a>
+                      <a href="#ce">Cédulña de extranjería</a>
+                      <a href="#pass">Pasaporte</a>
+                      <a href="#pe">Permiso especial</a>
+                    </div>
+                </div>
+            </div>
+              
+            <label class="item">
+                <div id="doc_type_title">Número de documento</div>
+                <input type="text" placeholder="Ingresa el número de tu documento"  class="coco_input"  />
+                <div style="display: none;" id="error_alert"> Error al escribir en este campo</div>
+            </label>
+            <label class="item">
+                <div id="doc_type_title">Validador opcional</div>
+                <input type="text" placeholder="Ingresa el dato faltante"  class="coco_input"  />
+                <div style="display: none;" id="error_alert"> Error al escribir en este campo</div>
+            </label>
+            <div id="btn_search_container" class="section">
+                <button id="btn_search" > Siguiente </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="bottom_coco_container">
+    <div id="bottom_coco">
+        <img id="coco" src="imagenes\coco_logo.svg" alt="">
+    </div>
+</div>
+    
+</body>
+</html>
